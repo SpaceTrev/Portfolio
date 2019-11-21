@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const PhotoPage = () => (
+const Photo = () => (
   <Layout>
     <SEO title="Photos Page" />
     <h1>Hi from the Photos</h1>
@@ -13,4 +13,4 @@ const PhotoPage = () => (
   </Layout>
 )
 
-export default PhotoPage
+export default Photo

@@ -49,10 +49,10 @@ const Header = ({ siteTitle }) => (
       </HeaderDiv>
     </SpaceHeader>
     <NavBar>
-      <NavbarLink to="/apps/">Apps</NavbarLink>
-      <NavbarLink to="/writing/">Writing</NavbarLink>
-      <NavbarLink to="/photo/">Photo</NavbarLink>
-      <NavbarLink to="/contact/">Content</NavbarLink>
+      <NavbarLink to="/projects">Apps</NavbarLink>
+      <NavbarLink to="/writing">Writing</NavbarLink>
+      <NavbarLink to="/photo">Photo</NavbarLink>
+      <NavbarLink to="/contact">Content</NavbarLink>
     </NavBar>
   </>
 )
