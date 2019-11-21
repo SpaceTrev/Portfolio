@@ -4,6 +4,12 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Button from "@material-ui/core/Button"
+import styled from "styled-components"
+
+const StyledBtn = styled(Button)`
+  background-color: red !important;
+`
 
 const IndexPage = () => (
   <Layout>

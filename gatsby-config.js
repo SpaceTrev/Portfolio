@@ -27,6 +27,31 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+
+    {
+      resolve: `@wapps/gatsby-plugin-material-ui`,
+      options: {
+        theme: {
+          palette: {
+            // primary: {
+            //   dark: '#0097a7',
+            //   light: '#bdbdbd',
+            //   main: '#2196f3',
+            // },
+            // secondary: {
+            //   main: '#c62828',
+            // },
+          },
+          typography: {
+            useNextVariants: true,
+          },
+          stylesProvider: {
+            injectFirst: true,
+          },
+        },
+      },
+    },
+    `gatsby-plugin-styled-components`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
