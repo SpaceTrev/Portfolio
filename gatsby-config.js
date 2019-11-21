@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Space Trev`,
+    description: `Space Trevs Portofolio showcasing his work`,
+    author: `Space Trev`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,30 +25,6 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-
-    {
-      resolve: `@wapps/gatsby-plugin-material-ui`,
-      options: {
-        theme: {
-          palette: {
-            // primary: {
-            //   dark: '#0097a7',
-            //   light: '#bdbdbd',
-            //   main: '#2196f3',
-            // },
-            // secondary: {
-            //   main: '#c62828',
-            // },
-          },
-          typography: {
-            useNextVariants: true,
-          },
-          stylesProvider: {
-            injectFirst: true,
-          },
-        },
       },
     },
     `gatsby-plugin-styled-components`,
