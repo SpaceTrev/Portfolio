@@ -3,6 +3,8 @@
 }
 
 body {
+  color: #fff;
+  background: #181a1b;
   margin: 0;
-  font-family: Arial;
+  font-family: Andale Mono, monospace;
 }

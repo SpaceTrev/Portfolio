@@ -1,0 +1,17 @@
+<svg width="300" height="300">
+  <defs>
+    <path id="svg-half-plane"
+          d=" M 0,-5
+              A 1,1 0 0 1 1,-4
+              L 1,-1 5,1 5,2 1,1 1,3 2,4 2,5 0,4"
+          ></path>
+
+    <symbol viewBox="0 0 10 10" id="svg-plane" overflow="visible" fill="#ffffff">
+      <use xlink:href="#svg-half-plane"></use>
+      <use xlink:href="#svg-half-plane" transform="scale(-1, 1)"></use>
+    </symbol>
+  </defs>
+  <g>
+    <use xlink:href="#svg-plane" x="100" y="100" width="50" height="50"></use>
+  </g>
+</svg>

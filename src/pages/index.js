@@ -2,6 +2,7 @@ import React from "react"
 import { Router } from "@reach/router"
 import {
   Landing,
+  Box,
   Contact,
   Projects,
   Photo,
@@ -13,6 +14,7 @@ const App = () => {
   return (
     <Router>
       <Landing path="/" />
+      <Box path="/box" />
       <Contact path="/contact" />
       <Projects path="/projects" />
       <Photo path="/photo" />
