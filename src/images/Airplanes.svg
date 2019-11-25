@@ -1,17 +1,6 @@
-<svg width="300" height="300">
-  <defs>
-    <path id="svg-half-plane"
-          d=" M 0,-5
-              A 1,1 0 0 1 1,-4
-              L 1,-1 5,1 5,2 1,1 1,3 2,4 2,5 0,4"
-          ></path>
-
-    <symbol viewBox="0 0 10 10" id="svg-plane" overflow="visible" fill="#ffffff">
-      <use xlink:href="#svg-half-plane"></use>
-      <use xlink:href="#svg-half-plane" transform="scale(-1, 1)"></use>
-    </symbol>
-  </defs>
-  <g>
-    <use xlink:href="#svg-plane" x="100" y="100" width="50" height="50"></use>
-  </g>
+<svg width="75" height="75" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Airplanes 1">
+<path id="Vector" d="M150 75C150 78.9782 148.42 82.7936 145.607 85.6066C142.794 88.4196 138.978 90 135 90H90L60 150H45L60 90H30L15 105L0 105L15 75" fill="black"/>
+<path id="Vector_2" d="M150 75C150 71.0218 148.42 67.2064 145.607 64.3934C142.794 61.5804 138.978 60 135 60H90L60 0H45L60 60H30L15 45L0 45L15 75" fill="black"/>
+</g>
 </svg>

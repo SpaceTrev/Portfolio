@@ -2,26 +2,23 @@ import React from "react"
 import { Link } from "gatsby"
 import SEO from "../components/seo"
 import styled, { keyframes } from "styled-components"
-import Eyes from "../images/eyez.svg"
+import Eyes from "../images/eyeballz.svg"
 import NorthAmer from "../images/USA.svg"
 import Europa from "../images/EU.svg"
-import Airplane from "../images/Airplanes.svg"
+import Airplane from "../images/aero.svg"
+import Cloud from "../images/cloud-boi.svg"
 const flypath = keyframes`
 {
   0% {
-      transform  : rotateY(0deg) translateZ(140px) scale3d(1, 1, 1);
+      transform  : translateX(-40vw) rotateY(0deg) translateZ(140px) scale3d(1, 1, 1);
       opacity    : 1.0;
   }
-
   50% {
-      /* This line is different for -webkit! */
-      -webkit-transform : rotateY(180deg) translateZ(140px) scale3d(0.5, 0.5, 0.5);
-      transform  : rotateY(180deg) translateZ(140px) scale3d(1, 1, 1);
+      transform  : translateX(31vw) translateZ(140px) scale3d(1, 1, 1);
       opacity    : 0.5;
   }
-
   100% {
-      transform  : rotateY(360deg) translateZ(140px) scale3d(1, 1, 1);
+      transform  : translateX(-40vw) rotateY(180deg) translateZ(140px) scale3d(1, 1, 1);
       opacity    : 1.0;
   }
 }
@@ -66,13 +63,69 @@ const shakeEm = keyframes`
     }
   }
 `
-
-const Spinz = styled(Eyes)`
-  width: 600px;
-  height: 300px;
-  & #right-pupil {
-    animation: ${shakeEm} 2s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+const hideshow = keyframes`
+  0% {
+    opacity: 1;
   }
+  10% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+`
+const colorShift = keyframes`
+  0% {
+    background: linear-gradient(90deg, #00d0ac, #060080);
+  }
+  25% {
+    background: linear-gradient(90deg, #a266ff, #1611aa);
+  }
+  50% {
+    background: linear-gradient(90deg, #0088D2, #1BD760);
+  }
+  100% {
+    background: linear-gradient(90deg, #ECB22D, #060080);
+  }
+`
+
+const cloudAnimations = keyframes`
+  0% {
+    margin-left: -100%;
+  }
+  100% {
+    margin-left: 100%;
+  }
+`
+const Row = styled.div`
+  width: 100%;
+  animation: ${colorShift} 10s infinite ease-in-out;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  z-index: -1 !important;
+`
+const FlexRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`
+const FlexColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+const Spinz = styled(Eyes)`
+  width: 300px;
+  height: 150px;
+  /* & #right-pupil {
+    animation: ${shakeEm} 2s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+  } */
   & #left-pupil {
     animation: ${shakeEm} 1s cubic-bezier(1, -0.46, 0.07, 1.28) both infinite;
   }
@@ -87,42 +140,60 @@ const Spinz = styled(Eyes)`
     transform-box: fill-box;
   }
 `
-
-const FlyPlane = styled(Airplane)`
-  animation: ${flypath} 2500ms infinite linear;
-`
-
-const Row = styled.div`
+const PlaneDiv = styled(FlexRow)`
+  margin: 0;
   display: flex;
-  flex-direction: row;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
+  flex-direction: flex-row;
+  min-width: 100vw;
+  z-index: 1;
 `
+const FlyPlane = styled(Airplane)`
+  height: 75px;
+  width: 75px;
+  animation: ${flypath} 6s infinite linear;
+`
+const CloudDiv = styled(FlexRow)`
+  min-width: 100vw;
+`
+
+const CloudMoves = styled(Cloud)`
+  fill: #ffffff;
+  animation: ${cloudAnimations} 10s linear infinite;
+`
+
 const EuropeDiv = styled.div`
   position: absolute;
-  bottom: 0;
+  bottom: 11rem;
   right: 0;
-  z-index: -1;
 `
 const EuropaMap = styled(Europa)`
   width: 401px;
   height: 420px;
   & #spain {
-    animation: ${spin} 2s linear infinite;
     transform-origin: center;
     transform-box: fill-box;
+    &:hover {
+      animation: ${spin} 2s linear infinite;
+    }
   }
 `
 const NorthAmericaDiv = styled.div`
   position: absolute;
-  bottom: 0;
+  bottom: 2rem;
   left: 0;
 `
 
 const NorthAmerMap = styled(NorthAmer)`
   width: 459px;
   height: 393px;
+  & #CO {
+    fill: #c5c5c5 !important;
+    transform-origin: center;
+    transform-box: fill-box;
+    &:hover {
+      animation: ${spin} 2.3s linear infinite;
+    }
+  }
 `
 
 const Button = styled(Link)`
@@ -142,39 +213,58 @@ const Button = styled(Link)`
     background: #14ccad4f;
   }
 `
-const FlexRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-`
-const FlexColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-`
+
 const NameH1 = styled.h1`
   text-shadow: 2px 2px 8px #aaf499;
 `
 
+const H31 = styled.h3`
+  opacity: 0;
+  animation: ${hideshow} 7s ease infinite;
+  transform: matrix(1 0 0 1 134.1416 285.127);
+`
+const H32 = styled.h3`
+  opacity: 0;
+  animation: ${hideshow} 7s 1.5s ease infinite;
+  transform: matrix(1 0 0 1 134.1416 285.127);
+`
+const H33 = styled.h3`
+  opacity: 0;
+  animation: ${hideshow} 7s 3s ease infinite;
+  transform: matrix(1 0 0 1 134.1416 285.127);
+`
+const H34 = styled.h3`
+  opacity: 0;
+  animation: ${hideshow} 7s 4.5s ease infinite;
+  transform: matrix(1 0 0 1 134.1416 285.127);
+`
 const Landing = () => {
   return (
     <>
       <SEO title="Landing" />
       <Row>
         <FlexColumn>
+          <CloudDiv>
+            <CloudMoves />
+          </CloudDiv>
           <FlexRow>
             <Spinz />
           </FlexRow>
           <FlexRow>
-            <FlyPlane />
             <NameH1>Trev B</NameH1>
           </FlexRow>
           <FlexRow>
-            <h3>development portfolio:</h3>
+            <H31>Software Developer</H31>
+            <H32>React</H32>
+            <H33>graphql</H33>
+            <H34>Styled-Components</H34>
           </FlexRow>
           <FlexRow>
             <Button to="/projects">Enter @ Own Risk</Button>
           </FlexRow>
+          <PlaneDiv>
+            <FlyPlane />
+          </PlaneDiv>
         </FlexColumn>
         <EuropeDiv>
           <EuropaMap />
