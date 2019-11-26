@@ -5,15 +5,15 @@ import styled from "styled-components"
 import Header from "./header"
 import "./layout.css"
 const PageFooter = styled.footer`
-  position: fixed;
-  bottom: 10px;
-  display: flex;
-  justify-content: center !important;
-  align-items: center;
-`
-const Content = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+`
+const Content = styled.div`
+  min-height: calc(100vh - 240px);
+  min-width: 100vw;
+  display: flex;
 `
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

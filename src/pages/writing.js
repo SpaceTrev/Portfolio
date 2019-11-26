@@ -17,9 +17,9 @@ const BlogCard = styled.div`
 
 const BlogBox = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   list-style: none;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -35,6 +35,9 @@ const BlogCardBtn = styled(Link)`
   color: #fff;
   text-decoration: none;
   text-align: center;
+  &:hover {
+    background: #0c9d0033;
+  }
 `
 
 const Writing = ({ data }) => {
