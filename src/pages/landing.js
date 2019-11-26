@@ -7,6 +7,9 @@ import NorthAmer from "../images/USA.svg"
 import Europa from "../images/EU.svg"
 import Airplane from "../images/aero.svg"
 import Cloud from "../images/cloud-boi.svg"
+import Sun from "../images/sonnyboi.svg"
+import Lunar from "../images/lunar.svg"
+
 const flypath = keyframes`
 {
   0% {
@@ -79,16 +82,154 @@ const hideshow = keyframes`
 `
 const colorShift = keyframes`
   0% {
-    background: linear-gradient(90deg, #00d0ac, #060080);
+    background: #181A1B;
   }
-  25% {
-    background: linear-gradient(90deg, #a266ff, #1611aa);
+  4% {
+    background: linear-gradient(to bottom, #181111 80%, #962f1f 100%);
   }
-  50% {
-    background: linear-gradient(90deg, #0088D2, #1BD760);
+  8% {
+    background: linear-gradient(to bottom, #962f1f 50%, #962e1a 100%);
+  }
+  12% {
+    background: linear-gradient(
+      to bottom,
+      #962e1a 30%,
+      #c5752d 80%,
+      #ff7034 100%
+    );
+  }
+  16% {
+    background: linear-gradient(
+      to bottom,
+      #c5752d 0%,
+      #ff7034 30%,
+      #c5752d 80%,
+      #ffaa11 100%
+    );
+  }
+  20% {
+    background: linear-gradient(
+      to bottom,
+      #800000 0%,
+      #c5752d 30%,
+      #ffaa11 60%,
+      #4f4f47 80%,
+      #163c52 100%
+    );
+  }
+  24% {
+    background: linear-gradient(
+      to bottom,
+      #ffaa11 0%,
+      #4f4f47 30%,
+      #154277 70%,
+      #1e528e 100%
+    );
+  }
+  28% {
+    background: linear-gradient(
+      to bottom,
+      #e9ce5d 0%,
+      #154277 50%,
+      #1e528e 100%
+    );
+  }
+  32% {
+    background: linear-gradient(
+      to bottom,
+      #154277 0%,
+      #265889 50%,
+      #1e528e 100%
+    );
+  }
+  36% {
+    background: linear-gradient(
+      to bottom,
+      #2473ab 0%,
+      #1e528e 70%,
+      #5b7983 100%
+    );
+  }
+  40% {
+    background: linear-gradient(to bottom, #2d91c2 0%, #1e528e 100%);
+  }
+  44% {
+    background: linear-gradient(to bottom, #57c1eb 0%, #246fa8 100%);
+  }
+  48% {
+    background: linear-gradient(to bottom, #57c1eb 0%, #38a3d1 100%);
+  }
+  52% {
+    background: linear-gradient(to bottom, #1e528e 0%, #2d91c2 100%);
+  }
+  56% {
+    background: linear-gradient(to bottom, #246fa8 0%, #1e528e 100%);
+  }
+  60% {
+    background: linear-gradient(
+      to bottom,
+      #1e528e 1%,
+      #246fa8 70%,
+      #757abf 100%
+    );
+  }
+  64% {
+    background: linear-gradient(to bottom, #246fa8 0%, #757abf 100%);
+  }
+  68% {
+    background: linear-gradient(
+      to bottom,
+      #246fa8 0%,
+      #8583be 60%,
+      #ffaa11 100%
+    );
+  }
+  72% {
+    background: linear-gradient(
+      to bottom,
+      #8583be 0%,
+      #ffaa11 50%,
+      #800000 100%
+    );
+  }
+
+  76% {
+    background: linear-gradient(
+      to bottom,
+      #ffaa11 0%,
+      #800000 80%,
+      #800000 100%
+    );
+  }
+  80% {
+    background: linear-gradient(to bottom, #800000 0%, #20202c 100%);
+  }
+  84% {
+    background: linear-gradient(to bottom, #800034 10%, #20202c 100%);
+  }
+
+  88% {
+    background: linear-gradient(to bottom, #181A1B 85%, #191621 100%);
+  }
+  92% {
+    background: linear-gradient(to bottom, #181A1B 85%, #181A1B 100%);
+  }
+  96% {
+    background: linear-gradient(to bottom, #181A1B 85%, #181A1B 100%);
   }
   100% {
-    background: linear-gradient(90deg, #ECB22D, #060080);
+    background: #181A1B;
+  }
+`
+const flightArch = keyframes`
+  0% {
+   align-items: center;
+  }
+  25% {
+    align-items: flex-start;
+  }
+  50% {
+    align-items: center;
   }
 `
 
@@ -102,7 +243,7 @@ const cloudAnimations = keyframes`
 `
 const Row = styled.div`
   width: 100%;
-  animation: ${colorShift} 10s infinite ease-in-out;
+  animation: ${colorShift} 33s infinite ease-in-out;
   display: flex;
   flex-direction: row;
   min-height: 100vh;
@@ -139,6 +280,12 @@ const Spinz = styled(Eyes)`
     transform-origin: center;
     transform-box: fill-box;
   }
+`
+const SunnyBoi = styled(Sun)`
+  animation: ${cloudAnimations} 10s linear infinite;
+`
+const LoonyBoi = styled(Lunar)`
+  animation: ${cloudAnimations} 11s 11s linear infinite;
 `
 const PlaneDiv = styled(FlexRow)`
   margin: 0;
