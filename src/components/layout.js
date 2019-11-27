@@ -10,11 +10,17 @@ const PageFooter = styled.footer`
 const FooterDiv = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: -50px;
+  margin-bottom: 10px;
+  margin-top: -60px;
+  @media screen and (max-width: 700px) {
+    margin-top: 0px;
+  }
 `
 const Content = styled.div`
-  height: calc(100vh - 220px);
+  min-height: calc(100vh - 210px);
   width: 100vw;
+  display: flex;
+  flex-direction: column;
 `
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
