@@ -40,6 +40,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#0f0f0f`,
         theme_color: `#0f0f0f`,
+        icon: `src/images/TBDLogoMini.svg`,
         display: `minimal-ui`,
       },
     },
