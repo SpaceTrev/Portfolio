@@ -6,6 +6,8 @@ import styled from "styled-components"
 const FlexColumnCentered = styled(FlexColumn)`
   align-items: center;
   justify-content: center;
+  text-align: center;
+  margin: 0px 5px;
 `
 const HeaderCard = props => (
   <FlexColumnCentered>

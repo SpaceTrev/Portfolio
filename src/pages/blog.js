@@ -17,7 +17,8 @@ const BlogCard = styled.div`
 
 const BlogBox = styled.div`
   display: flex;
-  /* flex-wrap: wrap; */
+  /* max-width: 100%; */
+  flex-wrap: wrap;
   list-style: none;
   justify-content: flex-start;
   align-items: center;
