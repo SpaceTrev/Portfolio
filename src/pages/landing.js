@@ -7,6 +7,7 @@ import NorthAmer from "../images/USA.svg"
 import Europa from "../images/EU.svg"
 import Airplane from "../images/aero.svg"
 import Cloud from "../images/cloud-boi.svg"
+import SpaceTrev from "../images/SpaceTrevLogoWhite.svg"
 // import Sun from "../images/sonnyboi.svg"
 // import Lunar from "../images/lunar.svg"
 
@@ -455,7 +456,7 @@ const Landing = () => {
             <Spinz />
           </FlexRow>
           <FlexRow>
-            <NameH1>Trev B</NameH1>
+            <SpaceTrev />
           </FlexRow>
           <FlexRow>
             <H31>Software Developer</H31>
