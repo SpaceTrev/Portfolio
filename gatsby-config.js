@@ -35,7 +35,8 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Trevb.dev`,
-        short_name: `trevbdev`,
+        short_name: `trevbdev
+        `,
         start_url: `/`,
         background_color: `#0f0f0f`,
         theme_color: `#0f0f0f`,
