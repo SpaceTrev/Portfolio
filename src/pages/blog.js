@@ -11,7 +11,7 @@ const BlogCard = styled.div`
   flex-wrap: wrap;
   padding: 20px;
   margin: 20px 20px;
-  border: outset 1px #98f22f;
+  border: solid 1px #98f22f;
   border-radius: 4px;
 `
 
