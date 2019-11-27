@@ -324,9 +324,8 @@ const FlyPlane = styled(Airplane)`
   /* @media screen and (max-width: 1130px) {
     animation: ${flypathMin} 6s infinite linear;
   } */
-  @media screen and (max-width: 400px) {
-    height: 40px;
-    width: 40px;
+  @media screen and (max-width: 900px) {
+   display: none;
   }
 `
 const CloudDiv = styled(FlexRow)`
@@ -356,6 +355,9 @@ const EuropeDiv = styled.div`
     height: 220px !important;
     /* bottom: 8rem; */
   }
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 `
 const EuropaMap = styled(Europa)`
   & #spain {
@@ -381,6 +383,9 @@ const NorthAmericaDiv = styled.div`
     width: 201px !important;
     height: 41px !important;
     /* bottom: 15rem; */
+  }
+  @media screen and (max-width: 900px) {
+    display: none;
   }
 `
 

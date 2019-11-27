@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
       </Content>
       <FooterDiv>
         <PageFooter>
-          © {new Date().getFullYear()}, Built by Space Trev
+          Built in {new Date().getFullYear()} by Space Trev
         </PageFooter>
       </FooterDiv>
     </>
