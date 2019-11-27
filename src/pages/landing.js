@@ -312,10 +312,14 @@ const EuropeDiv = styled.div`
   position: absolute;
   bottom: 11rem;
   right: 0;
-`
-const EuropaMap = styled(Europa)`
   width: 401px;
   height: 420px;
+  @media screen and (width: 1439px) {
+    width: 301px !important;
+    height: 320px !important;
+  }
+`
+const EuropaMap = styled(Europa)`
   & #spain {
     transform-origin: center;
     transform-box: fill-box;
@@ -328,11 +332,15 @@ const NorthAmericaDiv = styled.div`
   position: absolute;
   bottom: 2rem;
   left: 0;
+  width: 459px;
+  height: 393px;
+  @media screen and (width: 1439px) {
+    width: 359px !important;
+    height: 293px !important;
+  }
 `
 
 const NorthAmerMap = styled(NorthAmer)`
-  width: 459px;
-  height: 393px;
   & #CO {
     fill: #c5c5c5 !important;
     transform-origin: center;
