@@ -29,11 +29,11 @@ const BackToWritingBtn = styled(Link)`
     background: #14ccad;
   }
 `
-const BlogPostTemplate = ({ data, pathContext }) => {
+const BlogPostTemplate = ({ data, pageContext }) => {
   const title = data.markdownRemark.frontmatter.title
   const date = data.markdownRemark.frontmatter.date
   const html = data.markdownRemark.html
-  const { next, prev } = pathContext
+  const { next, prev } = pageContext
 
   return (
     <FlexBox>
