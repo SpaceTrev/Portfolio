@@ -16,6 +16,19 @@ const FlexBox = styled.div`
   justify-content: center;
   align-items: center;
 `
+const BackToWritingBtn = styled(Link)`
+  height: 50px;
+  width: 150px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 0px 10px 10px 10px;
+  background: #14ccad33;
+  text-decoration: none;
+  color: #f1f1f1;
+  &:hover {
+    background: #14ccad;
+  }
+`
 const BlogPostTemplate = ({ data, pathContext }) => {
   const title = data.markdownRemark.frontmatter.title
   const date = data.markdownRemark.frontmatter.date
@@ -34,28 +47,25 @@ const BlogPostTemplate = ({ data, pathContext }) => {
           className="blogpost"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-        <p>
-          {prev && (
-            <Link to={prev.frontmatter.path}>
-              {prev.frontmatter.title}{" "}
-              <span role="img" aria-label="point-left">
-                👈{" "}
-              </span>
-              Previous
-            </Link>
-          )}
-        </p>
-        <p>
-          {next && (
-            <Link to={next.frontmatter.path}>
-              Next{" "}
-              <span role="img" aria-label="point-right">
-                👉
-              </span>
-              {next.frontmatter.title}
-            </Link>
-          )}
-        </p>
+        {prev && (
+          <BackToWritingBtn to={prev.frontmatter.path}>
+            {prev.frontmatter.title}{" "}
+            <span role="img" aria-label="point-left">
+              👈{" "}
+            </span>
+            Previous
+          </BackToWritingBtn>
+        )}
+        {next && (
+          <BackToWritingBtn to={next.frontmatter.path}>
+            Next{" "}
+            <span role="img" aria-label="point-right">
+              👉
+            </span>
+            {next.frontmatter.title}
+          </BackToWritingBtn>
+        )}
+        <BackToWritingBtn to="/writing">Back To Writing</BackToWritingBtn>
       </BlogBox>
     </FlexBox>
   )
