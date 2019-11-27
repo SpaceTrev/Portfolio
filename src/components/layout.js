@@ -6,14 +6,15 @@ import Header from "./header"
 import "./layout.css"
 const PageFooter = styled.footer`
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+`
+const FooterDiv = styled.div`
+  display: flex;
   justify-content: center;
+  margin-top: -50px;
 `
 const Content = styled.div`
-  min-height: calc(100vh - 240px);
-  min-width: 100vw;
-  display: flex;
+  height: calc(100vh - 220px);
+  width: 100vw;
 `
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -31,10 +32,12 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <Content>
         <main>{children}</main>
+      </Content>
+      <FooterDiv>
         <PageFooter>
           © {new Date().getFullYear()}, Built by Space Trev
         </PageFooter>
-      </Content>
+      </FooterDiv>
     </>
   )
 }

@@ -40,7 +40,7 @@ const BlogCardBtn = styled(Link)`
   }
 `
 
-const Writing = ({ data }) => {
+const Blog = ({ data }) => {
   const { edges } = data.allMarkdownRemark
 
   return (
@@ -94,4 +94,4 @@ export const query = graphql`
   }
 `
 
-export default Writing
+export default Blog

@@ -1,15 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import HeaderCard from "../components/ProjectsHeaderCard"
+import AppDiv from "../reusable/AppDiv"
 const Contact = () => (
   <Layout>
-    <SEO title="Contact Page" />
-    <h1>Hi from the Contact</h1>
-    <p>Welcome to Contact</p>
-    <Link to="/">Go back to the homepage</Link>
+  <AppDiv>
+    <HeaderCard name="Contact" greeting="Welcome To My Contact Page" status="It is currently under construction"/>
+  </AppDiv>
   </Layout>
 )
 

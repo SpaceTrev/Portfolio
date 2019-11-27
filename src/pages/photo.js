@@ -1,15 +1,20 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import HeaderCard from "../components/ProjectsHeaderCard"
+import AppDiv from "../reusable/AppDiv"
 
 const Photo = () => (
   <Layout>
     <SEO title="Photos Page" />
-    <h1>Hi from the Photos</h1>
-    <p>Welcome to Photos</p>
-    <Link to="/">Go back to the homepage</Link>
+    <AppDiv>
+      <HeaderCard
+        name="Photo"
+        greeting="Welcome To My Photo Page"
+        status="Page Under Construction"
+      />
+    </AppDiv>
   </Layout>
 )
 

@@ -1,26 +1,25 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import styled from "styled-components"
+import FlexRow from "../reusable/FlexRow"
 
 const TextBox = styled.div`
-  width: 500px;
+  margin: 0px 40px 10px 40px;
 `
 const BlogBox = styled.div`
-  width: 500px;
-  height: 1000px;
   text-align: center;
+  max-width: 800px;
 `
 const FlexBox = styled.div`
+  min-height: 100vh;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 `
-const BackToWritingBtn = styled(Link)`
-  height: 50px;
-  width: 150px;
+const BackToBlogBtn = styled(Link)`
   border-radius: 4px;
   padding: 10px 20px;
+  line-height: 10px;
   margin: 0px 10px 10px 10px;
   background: #14ccad33;
   text-decoration: none;
@@ -28,6 +27,11 @@ const BackToWritingBtn = styled(Link)`
   &:hover {
     background: #14ccad;
   }
+`
+const FlexButtonBox = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `
 const BlogPostTemplate = ({ data, pageContext }) => {
   const title = data.markdownRemark.frontmatter.title
@@ -43,29 +47,28 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           <em>{date}</em>
         </div>
         <br />
-        <TextBox
-          className="blogpost"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-        {prev && (
-          <BackToWritingBtn to={prev.frontmatter.path}>
-            {prev.frontmatter.title}{" "}
-            <span role="img" aria-label="point-left">
-              👈{" "}
-            </span>
-            Previous
-          </BackToWritingBtn>
-        )}
-        {next && (
-          <BackToWritingBtn to={next.frontmatter.path}>
-            Next{" "}
-            <span role="img" aria-label="point-right">
-              👉
-            </span>
-            {next.frontmatter.title}
-          </BackToWritingBtn>
-        )}
-        <BackToWritingBtn to="/writing">Back To Writing</BackToWritingBtn>
+        <TextBox dangerouslySetInnerHTML={{ __html: html }} />
+        <FlexButtonBox>
+          <FlexRow>
+            {prev && (
+              <BackToBlogBtn to={prev.frontmatter.path}>
+                <span role="img" aria-label="point-left">
+                  👈{" "}
+                </span>
+                Previous
+              </BackToBlogBtn>
+            )}
+            {next && (
+              <BackToBlogBtn to={next.frontmatter.path}>
+                Next{" "}
+                <span role="img" aria-label="point-right">
+                  👉
+                </span>
+              </BackToBlogBtn>
+            )}
+            <BackToBlogBtn to="/blog">Back To Blog</BackToBlogBtn>
+          </FlexRow>
+        </FlexButtonBox>
       </BlogBox>
     </FlexBox>
   )

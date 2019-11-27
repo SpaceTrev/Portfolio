@@ -5,7 +5,7 @@ import Landing from "./landing"
 import Contact from "./contact"
 import Projects from "./projects"
 import Photo from "./photo"
-import Writing from "./writing"
+import Blog from "./blog"
 import NotFoundPage from "./404"
 
 const App = () => {
@@ -16,7 +16,7 @@ const App = () => {
       <Contact path="/contact" />
       <Projects path="/projects" />
       <Photo path="/photo" />
-      <Writing path="/writing" />
+      <Blog path="/blog" />
       <NotFoundPage path="/404" />
     </Router>
   )

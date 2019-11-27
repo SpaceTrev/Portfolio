@@ -4,7 +4,7 @@ import React from "react"
 import styled from "styled-components"
 
 const SpaceHeader = styled.header`
-  background: #1abc9ce0;
+  background: linear-gradient(125deg, #07bdea, #aad4d1, #b10af9);
   color: #ffffff;
   width: 100vw;
   display: flex;
@@ -49,10 +49,10 @@ const Header = ({ siteTitle }) => (
       </HeaderDiv>
     </SpaceHeader>
     <NavBar>
-      <NavbarLink to="/projects">Apps</NavbarLink>
-      <NavbarLink to="/writing">Writing</NavbarLink>
+      <NavbarLink to="/projects">Projects</NavbarLink>
+      <NavbarLink to="/blog">Blog</NavbarLink>
       <NavbarLink to="/photo">Photo</NavbarLink>
-      <NavbarLink to="/contact">Content</NavbarLink>
+      <NavbarLink to="/contact">Contact</NavbarLink>
     </NavBar>
   </>
 )
