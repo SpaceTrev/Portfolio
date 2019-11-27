@@ -13,15 +13,31 @@ import Cloud from "../images/cloud-boi.svg"
 const flypath = keyframes`
 {
   0% {
-      transform  : translateX(-40vw) rotateY(0deg) translateZ(140px) scale3d(1, 1, 1);
+      transform  : translateX(8vw) rotateY(0deg) translateZ(140px) scale3d(1, 1, 1);
       opacity    : 1.0;
   }
   50% {
-      transform  : translateX(31vw) translateZ(140px) scale3d(1, 1, 1);
+      transform  : translateX(80vw) translateZ(140px) scale3d(1, 1, 1);
       opacity    : 0.5;
   }
   100% {
-      transform  : translateX(-40vw) rotateY(180deg) translateZ(140px) scale3d(1, 1, 1);
+      transform  : translateX(8vw) rotateY(180deg) translateZ(140px) scale3d(1, 1, 1);
+      opacity    : 1.0;
+  }
+}
+`
+const flypathMin = keyframes`
+{
+  0% {
+      transform  : translateX(-39vw) rotateY(0deg) translateZ(140px) scale3d(1, 1, 1);
+      opacity    : 1.0;
+  }
+  50% {
+      transform  : translateX(25vw) translateZ(140px) scale3d(1, 1, 1);
+      opacity    : 0.5;
+  }
+  100% {
+      transform  : translateX(-39vw) rotateY(180deg) translateZ(140px) scale3d(1, 1, 1);
       opacity    : 1.0;
   }
 }
@@ -242,7 +258,7 @@ const cloudAnimations = keyframes`
   }
 `
 const Row = styled.div`
-  width: 100%;
+  width: 100vw;
   animation: ${colorShift} 33s infinite ease-in-out;
   display: flex;
   flex-direction: row;
@@ -287,19 +303,35 @@ const Spinz = styled(Eyes)`
 // const LoonyBoi = styled(Lunar)`
 //   animation: ${cloudAnimations} 11s 11s linear infinite;
 // `
+
 const PlaneDiv = styled(FlexRow)`
   margin: 0;
-  display: flex;
-  flex-direction: flex-row;
   min-width: 100vw;
-  z-index: 1;
 `
 const FlyPlane = styled(Airplane)`
+  position: absolute;
+  bottom: 10rem;
+  left: 0;
+  z-index: 1;
   height: 75px;
   width: 75px;
   animation: ${flypath} 6s infinite linear;
+  @media screen and (max-width: 1439px) {
+    width: 60px !important;
+    height: 60px !important;
+    bottom: 9rem;
+  }
+  /* @media screen and (max-width: 1130px) {
+    animation: ${flypathMin} 6s infinite linear;
+  } */
+  @media screen and (max-width: 400px) {
+    height: 40px;
+    width: 40px;
+  }
 `
 const CloudDiv = styled(FlexRow)`
+  position: absolute;
+  top: 3rem;
   min-width: 100vw;
 `
 
@@ -310,13 +342,19 @@ const CloudMoves = styled(Cloud)`
 
 const EuropeDiv = styled.div`
   position: absolute;
-  bottom: 11rem;
-  right: 0;
+  bottom: 1rem;
+  right: 1rem;
   width: 401px;
   height: 420px;
-  @media screen and (width: 1439px) {
+  @media screen and (max-width: 1439px) {
     width: 301px !important;
     height: 320px !important;
+    /* bottom: 7rem; */
+  }
+  @media screen and (max-width: 900px) {
+    width: 201px !important;
+    height: 220px !important;
+    /* bottom: 8rem; */
   }
 `
 const EuropaMap = styled(Europa)`
@@ -330,13 +368,19 @@ const EuropaMap = styled(Europa)`
 `
 const NorthAmericaDiv = styled.div`
   position: absolute;
-  bottom: 2rem;
-  left: 0;
-  width: 459px;
-  height: 393px;
-  @media screen and (width: 1439px) {
-    width: 359px !important;
-    height: 293px !important;
+  bottom: 5rem;
+  left: 1rem;
+  width: 401px;
+  height: 241px;
+  @media screen and (max-width: 1439px) {
+    width: 301px !important;
+    height: 141px !important;
+    bottom: 8rem;
+  }
+  @media screen and (max-width: 900px) {
+    width: 201px !important;
+    height: 41px !important;
+    /* bottom: 15rem; */
   }
 `
 
