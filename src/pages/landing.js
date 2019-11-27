@@ -7,8 +7,8 @@ import NorthAmer from "../images/USA.svg"
 import Europa from "../images/EU.svg"
 import Airplane from "../images/aero.svg"
 import Cloud from "../images/cloud-boi.svg"
-import Sun from "../images/sonnyboi.svg"
-import Lunar from "../images/lunar.svg"
+// import Sun from "../images/sonnyboi.svg"
+// import Lunar from "../images/lunar.svg"
 
 const flypath = keyframes`
 {
@@ -221,17 +221,17 @@ const colorShift = keyframes`
     background: #181A1B;
   }
 `
-const flightArch = keyframes`
-  0% {
-   align-items: center;
-  }
-  25% {
-    align-items: flex-start;
-  }
-  50% {
-    align-items: center;
-  }
-`
+// const flightArch = keyframes`
+//   0% {
+//    align-items: center;
+//   }
+//   25% {
+//     align-items: flex-start;
+//   }
+//   50% {
+//     align-items: center;
+//   }
+// `
 
 const cloudAnimations = keyframes`
   0% {
@@ -281,12 +281,12 @@ const Spinz = styled(Eyes)`
     transform-box: fill-box;
   }
 `
-const SunnyBoi = styled(Sun)`
-  animation: ${cloudAnimations} 10s linear infinite;
-`
-const LoonyBoi = styled(Lunar)`
-  animation: ${cloudAnimations} 11s 11s linear infinite;
-`
+// const SunnyBoi = styled(Sun)`
+//   animation: ${cloudAnimations} 10s linear infinite;
+// `
+// const LoonyBoi = styled(Lunar)`
+//   animation: ${cloudAnimations} 11s 11s linear infinite;
+// `
 const PlaneDiv = styled(FlexRow)`
   margin: 0;
   display: flex;
