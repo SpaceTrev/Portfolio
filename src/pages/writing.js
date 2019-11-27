@@ -24,8 +24,9 @@ const BlogBox = styled.div`
   margin: 0;
   padding: 0;
 `
-//
-
+// const BlogCardContent = styled.div``
+// const BlogCardImage = styled.div``
+// const BlogCardText = styled.p``
 const BlogCardBtn = styled(Link)`
   height: 20px;
   width: 150px;
