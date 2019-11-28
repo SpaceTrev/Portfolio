@@ -8,6 +8,7 @@ import Europa from "../images/EU.svg"
 import Airplane from "../images/aero.svg"
 import Cloud from "../images/cloud-boi.svg"
 import SpaceTrev from "../images/SpaceTrevLogoWhite.svg"
+import FlexRow from "../reusable/FlexRow"
 // import Sun from "../images/sonnyboi.svg"
 // import Lunar from "../images/lunar.svg"
 
@@ -238,17 +239,6 @@ const colorShift = keyframes`
     background: #181A1B;
   }
 `
-// const flightArch = keyframes`
-//   0% {
-//    align-items: center;
-//   }
-//   25% {
-//     align-items: flex-start;
-//   }
-//   50% {
-//     align-items: center;
-//   }
-// `
 
 const cloudAnimations = keyframes`
   0% {
@@ -256,6 +246,21 @@ const cloudAnimations = keyframes`
   }
   100% {
     margin-left: 100%;
+  }
+`
+
+const changeLetter = keyframes`
+  0% {
+    content: "Software Developer:";
+  }
+  25% {
+    content: "React";
+  }
+  50% {
+    content: "graphql";
+  }
+  100% {
+    content: "Styled-Components";
   }
 `
 const Row = styled.div`
@@ -268,11 +273,22 @@ const Row = styled.div`
   justify-content: center;
   z-index: -1 !important;
 `
-const FlexRow = styled.div`
-  display: flex;
-  flex-direction: row;
+const FlexRowCentered = styled(FlexRow)`
   align-items: center;
   justify-content: center;
+`
+
+const FlexRowWords = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 0px 20px 0px;
+  &:after {
+    animation: ${changeLetter} 3s linear infinite alternate;
+    display: block;
+    content: "Software Developer:";
+    font-size: 22px;
+  }
 `
 const FlexColumn = styled.div`
   display: flex;
@@ -419,30 +435,6 @@ const Button = styled(Link)`
   }
 `
 
-const NameH1 = styled.h1`
-  text-shadow: 2px 2px 8px #aaf499;
-`
-
-const H31 = styled.h3`
-  opacity: 0;
-  animation: ${hideshow} 7s ease infinite;
-  transform: matrix(1 0 0 1 134.1416 285.127);
-`
-const H32 = styled.h3`
-  opacity: 0;
-  animation: ${hideshow} 7s 1.5s ease infinite;
-  transform: matrix(1 0 0 1 134.1416 285.127);
-`
-const H33 = styled.h3`
-  opacity: 0;
-  animation: ${hideshow} 7s 3s ease infinite;
-  transform: matrix(1 0 0 1 134.1416 285.127);
-`
-const H34 = styled.h3`
-  opacity: 0;
-  animation: ${hideshow} 7s 4.5s ease infinite;
-  transform: matrix(1 0 0 1 134.1416 285.127);
-`
 const Landing = () => {
   return (
     <>
@@ -452,21 +444,16 @@ const Landing = () => {
           <CloudDiv>
             <CloudMoves />
           </CloudDiv>
-          <FlexRow>
+          <FlexRowCentered>
             <Spinz />
-          </FlexRow>
-          <FlexRow>
+          </FlexRowCentered>
+          <FlexRowCentered>
             <SpaceTrev />
-          </FlexRow>
-          <FlexRow>
-            <H31>Software Developer</H31>
-            <H32>React</H32>
-            <H33>graphql</H33>
-            <H34>Styled-Components</H34>
-          </FlexRow>
-          <FlexRow>
+          </FlexRowCentered>
+          <FlexRowWords></FlexRowWords>
+          <FlexRowCentered>
             <Button to="/projects">Enter @ Own Risk</Button>
-          </FlexRow>
+          </FlexRowCentered>
           <PlaneDiv>
             <FlyPlane />
           </PlaneDiv>

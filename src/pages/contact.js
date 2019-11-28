@@ -5,6 +5,7 @@ import HeaderCard from "../components/ProjectsHeaderCard"
 import AppDiv from "../reusable/AppDiv"
 const Contact = () => (
   <Layout>
+    <SEO title="contact"/>
   <AppDiv>
     <HeaderCard name="Contact" greeting="Welcome To My Contact Page" status="It is currently under construction"/>
   </AppDiv>
