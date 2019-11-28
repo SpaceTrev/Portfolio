@@ -84,20 +84,6 @@ const shakeEm = keyframes`
     }
   }
 `
-const hideshow = keyframes`
-  0% {
-    opacity: 1;
-  }
-  10% {
-    opacity: 1;
-  }
-  15% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-`
 const colorShift = keyframes`
   0% {
     background: #181A1B;
@@ -260,7 +246,7 @@ const changeLetter = keyframes`
     content: "graphql";
   }
   100% {
-    content: "Styled-Components";
+    content: "styled-components";
   }
 `
 const Row = styled.div`
