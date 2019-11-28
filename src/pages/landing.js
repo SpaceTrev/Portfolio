@@ -271,6 +271,10 @@ const FlexRowWords = styled.div`
   margin: 0px 0px 20px 0px;
   &:after {
     animation: ${changeLetter} 3s linear infinite alternate;
+    -webkit-animation: ${changeLetter} 3s linear infinite alternate;
+    -o-animation: ${changeLetter} 3s linear infinite alternate;
+    -ms-animation: ${changeLetter} 3s linear infinite alternate;
+    -moz-animation: ${changeLetter} 3s linear infinite alternate;
     display: block;
     content: "Software Developer:";
     font-size: 22px;
