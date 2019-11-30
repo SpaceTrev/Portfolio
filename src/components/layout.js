@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Content>
         <main>{children}</main>
@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
           Built in {new Date().getFullYear()} by Space Trev
         </PageFooter>
       </FooterDiv>
-    </>
+    </div>
   )
 }
 
