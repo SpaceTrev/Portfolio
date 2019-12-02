@@ -13,15 +13,15 @@ const TagsDiv = styled.div`
 const TagsLink = styled(Link)`
   margin-bottom: 2rem;
   list-style: none;
-  border: 1px solid #7fdbff;
-  border-radius: 4px;
+  background: #4169e2;
+  list-style: none;
   margin: 1rem;
   padding: 1rem 3rem;
   text-decoration: none;
   font-size: 1.1rem;
   color: #d3d3d3;
   &:hover {
-    background: #ffffff20;
+    background: #4169e2a5;
   }
 `
 const FlexDiv = styled.div`
@@ -37,6 +37,21 @@ const FlexColumn = styled.div`
   justify-content: flex-start;
   align-items: center;
 `
+const H1 = styled.h1`
+  padding: 5px 5px;
+  @media screen and (max-width: 800px) {
+    font-size: 20px !important;
+  }
+  @media screen and (max-width: 566px) {
+    font-size: 16px !important;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 14px !important;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 12px !important;
+  }
+`
 function Tags(props) {
   const posts = props.data.allMarkdownRemark.edges
   const { tag } = props.pageContext
@@ -44,7 +59,7 @@ function Tags(props) {
     <Layout>
       <FlexColumn>
         <FlexDiv>
-          <h1>{`Available posts with the tag: ${tag}`}</h1>
+          <H1>{`Available posts with the tag: ${tag}`}</H1>
         </FlexDiv>
         <TagsDiv>
           {posts.map(({ node }, i) => (
