@@ -20,13 +20,24 @@ const PrevNext = props => {
     <UL>
       {prev && (
         <LI>
-          <A href={prev.fields.slug}>👈 Prev: {prev.frontmatter.title}</A>
+          <A href={prev.fields.slug}>
+            <span role="img" aria-label="left pointing finger">
+              👈
+            </span>{" "}
+            Prev: {prev.frontmatter.title}
+          </A>
         </LI>
       )}
       {prev && next && <LI> {" | "}</LI>}
       {next && (
         <LI>
-          <A href={next.fields.slug}> Next: {next.frontmatter.title} 👉</A>
+          <A href={next.fields.slug}>
+            {" "}
+            Next: {next.frontmatter.title}{" "}
+            <span role="img" aria-label="right pointing finger">
+              👉
+            </span>
+          </A>
         </LI>
       )}
     </UL>

@@ -13,18 +13,26 @@ const NavBar = styled.div`
 `
 
 const NavbarLink = styled(Link)`
+  width: 50%;
   color: white;
-  padding: 14px 20px;
+  padding: 27px 20px;
+  border-radius: 4px;
   text-decoration: none;
   text-align: center;
   &:hover {
-    background-color: #ddd;
-    color: black;
+    background: #ffffff20;
+    color: #ffffffa5;
   }
 `
 const HeaderLink = styled(Link)`
   color: white;
   text-decoration: none;
+  width: 250px;
+  border-radius: 4px;
+  &:hover {
+    background: #ffffff20;
+    margin-left: -5px;
+  }
 `
 const HeaderDiv = styled.div`
   flex: 50%;
@@ -50,30 +58,27 @@ const SpaceTrevLogo = styled(SpaceTrev)`
 `
 const LI = styled.li``
 const Header = ({ siteTitle }) => (
-  <>
-    <NavBar>
-      <HeaderDiv>
-        <HeaderLink to="/">
-          <SpaceTrevLogo />
-        </HeaderLink>
-      </HeaderDiv>
-
-      <LinkDiv>
-        <LI>
-          <NavbarLink to="/projects">Projects</NavbarLink>
-        </LI>
-        <LI>
-          <NavbarLink to="/blog">Blog</NavbarLink>
-        </LI>
-        <LI>
-          <NavbarLink to="/photo">Photo</NavbarLink>
-        </LI>
-        <LI>
-          <NavbarLink to="/contact">Contact</NavbarLink>
-        </LI>
-      </LinkDiv>
-    </NavBar>
-  </>
+  <NavBar>
+    <HeaderDiv>
+      <HeaderLink to="/">
+        <SpaceTrevLogo />
+      </HeaderLink>
+    </HeaderDiv>
+    <LinkDiv>
+      <LI>
+        <NavbarLink to="/projects">Projects</NavbarLink>
+      </LI>
+      <LI>
+        <NavbarLink to="/blog">Blog</NavbarLink>
+      </LI>
+      <LI>
+        <NavbarLink to="/photo">Photo</NavbarLink>
+      </LI>
+      <LI>
+        <NavbarLink to="/contact">Contact</NavbarLink>
+      </LI>
+    </LinkDiv>
+  </NavBar>
 )
 
 Header.propTypes = {
