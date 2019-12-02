@@ -15,7 +15,7 @@ const NavBar = styled.div`
 const NavbarLink = styled(Link)`
   width: 50%;
   color: white;
-  padding: 27px 20px;
+  padding: 27.5px 20px;
   border-radius: 4px;
   text-decoration: none;
   text-align: center;
