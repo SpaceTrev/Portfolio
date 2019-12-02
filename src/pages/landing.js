@@ -438,7 +438,7 @@ const Landing = () => {
           </FlexRowCentered>
           <FlexRowWords></FlexRowWords>
           <FlexRowCentered>
-            <Button to="/home">Enter @ Own Risk</Button>
+            <Button to="/blog">Enter @ Own Risk</Button>
           </FlexRowCentered>
           <PlaneDiv>
             <FlyPlane />

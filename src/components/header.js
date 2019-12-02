@@ -33,14 +33,18 @@ const HeaderDiv = styled.div`
   justify-content: flex-start;
 `
 const LinkDiv = styled.ul`
-  flex: 50%;
+  /* flex: 50%; */
   display: flex;
   align-items: center;
   justify-content: flex-end;
   list-style: none;
+  @media screen and (max-width: 611px) {
+    display: none;
+  }
 `
 // const MobileDropDown = styled.div``
 const SpaceTrevLogo = styled(SpaceTrev)`
+  margin-left: 47px;
   height: 70px;
   width: 140px;
 `
