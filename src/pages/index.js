@@ -6,6 +6,7 @@ import Contact from "./contact"
 import Projects from "./projects"
 import Photo from "./photo"
 import Blog from "./blog"
+import TagsPage from "./tags"
 import NotFoundPage from "./404"
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <Projects path="/projects" />
       <Photo path="/photo" />
       <Blog path="/blog" />
+      <TagsPage path="tags" />
       <NotFoundPage path="/404" />
     </Router>
   )

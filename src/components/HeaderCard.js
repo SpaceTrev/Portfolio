@@ -20,7 +20,7 @@ const HeaderCard = props => (
       </p>
     </FlexRow>
     <FlexRow>
-      <LinkButton to="/">Go back to the homepage</LinkButton>
+      <LinkButton text="Click me" goTo={`/${props.to}`} />
     </FlexRow>
   </FlexColumnCentered>
 )

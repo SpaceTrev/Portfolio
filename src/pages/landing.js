@@ -9,8 +9,6 @@ import Airplane from "../images/aero.svg"
 import Cloud from "../images/cloud-boi.svg"
 import SpaceTrev from "../images/SpaceTrevLogoWhite.svg"
 import FlexRow from "../reusable/FlexRow"
-// import Sun from "../images/sonnyboi.svg"
-// import Lunar from "../images/lunar.svg"
 
 const flypath = keyframes`
 {
@@ -249,6 +247,15 @@ const changeLetter = keyframes`
     content: "styled-components";
   }
 `
+const LayoutContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: Andale Mono, monospace;
+  color: #fff;
+`
 const Row = styled.div`
   width: 100vw;
   animation: ${colorShift} 33s infinite ease-in-out;
@@ -304,12 +311,6 @@ const Spinz = styled(Eyes)`
     transform-box: fill-box;
   }
 `
-// const SunnyBoi = styled(Sun)`
-//   animation: ${cloudAnimations} 10s linear infinite;
-// `
-// const LoonyBoi = styled(Lunar)`
-//   animation: ${cloudAnimations} 11s 11s linear infinite;
-// `
 
 const PlaneDiv = styled(FlexRow)`
   margin: 0;
@@ -328,11 +329,8 @@ const FlyPlane = styled(Airplane)`
     height: 60px !important;
     bottom: 9rem;
   }
-  /* @media screen and (max-width: 1130px) {
-    animation: ${flypathMin} 6s infinite linear;
-  } */
   @media screen and (max-width: 900px) {
-   display: none;
+    display: none;
   }
 `
 const CloudDiv = styled(FlexRow)`
@@ -355,12 +353,10 @@ const EuropeDiv = styled.div`
   @media screen and (max-width: 1439px) {
     width: 301px !important;
     height: 320px !important;
-    /* bottom: 7rem; */
   }
   @media screen and (max-width: 900px) {
     width: 201px !important;
     height: 220px !important;
-    /* bottom: 8rem; */
   }
   @media screen and (max-width: 900px) {
     display: none;
@@ -411,7 +407,7 @@ const Button = styled(Link)`
   font-style: none;
   text-decoration: none;
   color: #ffffff;
-  background: #14ccad;
+  background: #2e183b;
   text-align: center;
   padding: 10px 0px 10px 0px;
   width: 200px;
@@ -421,13 +417,13 @@ const Button = styled(Link)`
   &:hover {
     border: 0.5px #333;
     color: #ffffff4f;
-    background: #14ccad4f;
+    background: #2e183b4f;
   }
 `
 
 const Landing = () => {
   return (
-    <>
+    <LayoutContainer>
       <SEO title="Landing" />
       <Row>
         <FlexColumn>
@@ -455,7 +451,7 @@ const Landing = () => {
           <NorthAmerMap />
         </NorthAmericaDiv>
       </Row>
-    </>
+    </LayoutContainer>
   )
 }
 

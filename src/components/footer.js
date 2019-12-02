@@ -5,6 +5,7 @@ const PageFooter = styled.footer`
   display: flex;
   text-align: center;
   justify-content: center;
+  align-items: flex-end;
   margin: auto auto 0 auto;
 `
 

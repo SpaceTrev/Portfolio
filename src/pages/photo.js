@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import HeaderCard from "../components/ProjectsHeaderCard"
+import HeaderCard from "../components/HeaderCard"
 import AppDiv from "../reusable/AppDiv"
 
 const Photo = () => (
@@ -10,6 +10,7 @@ const Photo = () => (
     <SEO title="Photos Page" />
     <AppDiv>
       <HeaderCard
+        to="blog"
         name="Photo"
         greeting="Welcome To My Photo Page"
         status="Page Under Construction"

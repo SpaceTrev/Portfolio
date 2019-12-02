@@ -1,98 +1,138 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
-import styled from "styled-components"
-import FlexRow from "../reusable/FlexRow"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-const BlogCard = styled.div`
-  width: 250px;
-  height: 250px;
-  background: #5bb1cd;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  margin: 20px 20px;
-  border: solid 1px #98f22f;
-  border-radius: 4px;
-`
+import styled from "styled-components"
 
-const BlogBox = styled.div`
+const List = styled.ul`
   display: flex;
-  /* max-width: 100%; */
   flex-wrap: wrap;
-  list-style: none;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
+  list-style: none;
 `
-// const BlogCardContent = styled.div``
-// const BlogCardImage = styled.div``
-// const BlogCardText = styled.p``
-const BlogCardBtn = styled(Link)`
-  height: 20px;
-  width: 150px;
-  background: #0c9d00;
+const ListItem = styled.li`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  padding: 0.5em;
+  max-height: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 30%;
+  @media screen and (max-width: 1245px) {
+    width: 40%;
+  }
+  @media screen and (max-width: 998px) {
+    width: 60%;
+  }
+`
+const ListContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 0em;
+  width: 100%;
   border-radius: 4px;
-  color: #fff;
-  text-decoration: none;
-  text-align: center;
+  border: 1px solid #ffffffa5;
+  background: #ffffff00;
   &:hover {
-    background: #0c9d0033;
+    background: #ffffff20;
+  }
+`
+const PostLink = styled(Link)`
+  color: #ffffffa5;
+  text-decoration: none;
+`
+const P = styled.div`
+  max-height: 100%;
+  padding: 10px 10px;
+  margin: 10px 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @media screen and (max-width: 665px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 325px) {
+    white-space: nowrap;
   }
 `
 
-const Blog = ({ data }) => {
-  const { edges } = data.allMarkdownRemark
+const Span = styled.span`
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 12px;
+  border: 0.5px solid #7fdbff;
+  border-radius: 2px;
+  @media screen and (max-width: 665px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 325px) {
+    font-size: 10px;
+  }
+  @media screen and (max-width: 300px) {
+    padding: 5px 8px;
+  }
+`
+const SpanContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`
+const H2 = styled.h2`
+  text-align: center;
+  margin: 5px 0px;
+  padding: 5px 5px;
+  @media screen and (max-width: 665px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 325px) {
+    font-size: 14px;
+  }
+`
 
+const Blog = props => {
+  const postList = props.data.allMarkdownRemark
   return (
     <Layout>
-      <BlogBox>
-        {edges.map(edge => {
-          const { frontmatter } = edge.node
-          return (
-            <BlogCard key={frontmatter.path}>
-              <FlexRow>
-                <p>{frontmatter.excerpt}</p>
-              </FlexRow>
-              <FlexRow>
-                <small>
-                  {" "}
-                  <em>published on</em> {frontmatter.date}
-                </small>
-              </FlexRow>
-              <FlexRow>
-                <BlogCardBtn to={frontmatter.path}>
-                  {frontmatter.title}
-                </BlogCardBtn>
-                &nbsp;
-              </FlexRow>
-              <br />
-            </BlogCard>
-          )
-        })}
-      </BlogBox>
+      <List>
+        {postList.edges.map(({ node }, i) => (
+          <ListItem>
+            <ListContent>
+              <PostLink to={node.fields.slug} key={i}>
+                <H2>{node.frontmatter.title}</H2>
+                <SpanContainer>
+                  <Span>{node.frontmatter.date}: </Span>
+                </SpanContainer>
+                <P>{node.excerpt}</P>
+              </PostLink>
+            </ListContent>
+          </ListItem>
+        ))}
+      </List>
     </Layout>
   )
 }
 
-export const query = graphql`
-  query HomePageQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
-      totalCount
+export default Blog
+
+export const listQuery = graphql`
+  query ListQuery {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          id
+          fields {
+            slug
+          }
+          excerpt(pruneLength: 200)
           frontmatter {
+            date(formatString: "MMMM Do YYYY")
             title
-            date(formatString: "MMMM DD, YYYY")
-            path
-            tags
-            excerpt
           }
         }
       }
     }
   }
 `
-
-export default Blog

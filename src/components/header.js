@@ -3,26 +3,15 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import SpaceTrev from "../images/SpaceTrevLogo.svg"
-const SpaceHeader = styled.header`
-  background: linear-gradient(125deg, #07bdea, #aad4d1, #b10af9);
-  color: #ffffff;
-  width: 100vw;
-  display: flex;
-  text-align: center;
-  padding: 20px;
-`
+
 const NavBar = styled.div`
   display: flex;
-  background: #333;
-  text-align: center;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  min-width: 100vw;
 `
-const HeaderDiv = styled.div`
-  margin: 0 auto;
-`
-const HeaderTitle = styled.h1`
-  margin: 0;
-`
+
 const NavbarLink = styled(Link)`
   color: white;
   padding: 14px 20px;
@@ -36,25 +25,48 @@ const NavbarLink = styled(Link)`
 const HeaderLink = styled(Link)`
   color: white;
   text-decoration: none;
-  display: flex;
-  justify-content: center;
 `
+const HeaderDiv = styled.div`
+  flex: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`
+const LinkDiv = styled.ul`
+  flex: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+`
+const SpaceTrevLogo = styled(SpaceTrev)`
+  height: 70px;
+  width: 140px;
+`
+const LI = styled.li``
 const Header = ({ siteTitle }) => (
   <>
-    <SpaceHeader>
-      <HeaderDiv>
-        <HeaderTitle>
-          <HeaderLink to="/">
-            <SpaceTrev />
-          </HeaderLink>
-        </HeaderTitle>
-      </HeaderDiv>
-    </SpaceHeader>
     <NavBar>
-      <NavbarLink to="/projects">Projects</NavbarLink>
-      <NavbarLink to="/blog">Blog</NavbarLink>
-      <NavbarLink to="/photo">Photo</NavbarLink>
-      <NavbarLink to="/contact">Contact</NavbarLink>
+      <HeaderDiv>
+        <HeaderLink to="/">
+          <SpaceTrevLogo />
+        </HeaderLink>
+      </HeaderDiv>
+
+      <LinkDiv>
+        <LI>
+          <NavbarLink to="/projects">Projects</NavbarLink>
+        </LI>
+        <LI>
+          <NavbarLink to="/blog">Blog</NavbarLink>
+        </LI>
+        <LI>
+          <NavbarLink to="/photo">Photo</NavbarLink>
+        </LI>
+        <LI>
+          <NavbarLink to="/contact">Contact</NavbarLink>
+        </LI>
+      </LinkDiv>
     </NavBar>
   </>
 )

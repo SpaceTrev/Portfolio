@@ -7,12 +7,15 @@ const LinkStyle = styled(Link)`
   color: #ffffff;
   line-height: 30px;
   padding: 5px 15px;
-  border: 0.5px solid #000;
   border-radius: 6px;
   text-align: center;
-  background: #88f4f4 !important;
+  background: #2e183b;
+  &:hover {
+    background: #2e183ba5;
+    color: #ffffffa5;
+  }
 `
 
-const LinkButton = () => <LinkStyle>Click me</LinkStyle>
+const LinkButton = props => <LinkStyle to={props.goTo}>{props.text}</LinkStyle>
 
 export default LinkButton
