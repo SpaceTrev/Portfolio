@@ -24,6 +24,10 @@ const PostDiv = styled.div`
   border-radius: 4px;
   margin: 15px 0px 25px 0px;
   color: #fffffffa;
+  @media screen and (max-width: 676px) {
+    margin: 15px 10px 25px 10px;
+    padding: 30px 45px;
+  }
 `
 const TagDiv = styled.div`
   display: flex;
@@ -39,6 +43,9 @@ const H1 = styled.h1`
   padding: 10px 47px;
   border: 2px solid #7fdbff;
   border-radius: 4px;
+  @media screen and (max-width: 676px) {
+    font-size: 22px;
+  }
 `
 const TagA = styled.a`
   padding: 5px 6px;
