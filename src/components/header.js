@@ -35,19 +35,31 @@ const HeaderLink = styled(Link)`
   }
 `
 const HeaderDiv = styled.div`
-  flex: 50%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  @media screen and (max-width: 665px) {
+    width: 40%;
+  }
+  /* @media screen and (max-width: 610px) {
+    width: 25%;
+  } */
 `
 const LinkDiv = styled.ul`
-  /* flex: 50%; */
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   list-style: none;
-  @media screen and (max-width: 611px) {
+  @media screen and (max-width: 665px) {
+    font-size: 12px;
+    width: 60%;
+  }
+  @media screen and (max-width: 610px) {
     display: none;
+    /* flex: 75%;
+    padding: 0px; */
   }
 `
 // const MobileDropDown = styled.div``

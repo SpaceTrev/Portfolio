@@ -15,8 +15,7 @@ const Tags = styled.div`
 const TagsLink = styled(Link)`
   margin-bottom: 2rem;
   list-style: none;
-  border: 1px solid #7fdbff;
-  border-radius: 4px;
+  background: #4169e2;
   list-style: none;
   margin: 1rem;
   padding: 1rem 3rem;
@@ -24,7 +23,7 @@ const TagsLink = styled(Link)`
   font-size: 1.1rem;
   color: #d3d3d3;
   &:hover {
-    background: #ffffff20;
+    background: #4169e2a5;
   }
 `
 const FlexDiv = styled.div`

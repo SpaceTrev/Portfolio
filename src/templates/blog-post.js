@@ -26,10 +26,11 @@ const PostDiv = styled.div`
   color: #fffffffa;
 `
 const TagDiv = styled.div`
-  /* display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
+  flex-wrap: wrap;
 `
 const H1 = styled.h1`
   font-weight: bolder;
