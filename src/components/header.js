@@ -10,6 +10,9 @@ const NavBar = styled.div`
   align-items: center;
   background: transparent;
   min-width: 100vw;
+  @media screen and (max-width: 665px) {
+    display: none !important;
+  }
 `
 
 const NavbarLink = styled(Link)`
@@ -39,13 +42,8 @@ const HeaderDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  @media screen and (max-width: 665px) {
-    width: 40%;
-  }
-  /* @media screen and (max-width: 610px) {
-    width: 25%;
-  } */
 `
+
 const LinkDiv = styled.ul`
   width: 50%;
   display: flex;
@@ -62,35 +60,108 @@ const LinkDiv = styled.ul`
     padding: 0px; */
   }
 `
-// const MobileDropDown = styled.div``
+
+const LI = styled.li``
+
 const SpaceTrevLogo = styled(SpaceTrev)`
   margin-left: 47px;
   height: 70px;
   width: 140px;
 `
-const LI = styled.li``
+
+const MobileNavBar = styled.div`
+  display: none;
+  @media screen and (max-width: 665px) {
+    display: block !important;
+  }
+`
+const MobileNavbarLink = styled(Link)`
+  width: 50%;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  &:hover {
+    background: #ffffff20;
+    color: #ffffffa5;
+  }
+`
+const MobileHeaderDiv = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`
+const MobileLinkDiv = styled.ul`
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0px;
+`
+const MobileHeaderLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  &:hover {
+    background: #ffffff20;
+  }
+`
+const MobileSpaceTrevLogo = styled(SpaceTrev)`
+  height: 70px;
+  width: 140px;
+`
+// const MobileDropDown = styled.div``
+
 const Header = ({ siteTitle }) => (
-  <NavBar>
-    <HeaderDiv>
-      <HeaderLink to="/">
-        <SpaceTrevLogo />
-      </HeaderLink>
-    </HeaderDiv>
-    <LinkDiv>
-      <LI>
-        <NavbarLink to="/projects">Projects</NavbarLink>
-      </LI>
-      <LI>
-        <NavbarLink to="/blog">Blog</NavbarLink>
-      </LI>
-      <LI>
-        <NavbarLink to="/photo">Photo</NavbarLink>
-      </LI>
-      <LI>
-        <NavbarLink to="/contact">Contact</NavbarLink>
-      </LI>
-    </LinkDiv>
-  </NavBar>
+  <>
+    <NavBar>
+      <HeaderDiv>
+        <HeaderLink to="/">
+          <SpaceTrevLogo />
+        </HeaderLink>
+      </HeaderDiv>
+      <LinkDiv>
+        <LI>
+          <NavbarLink to="/projects">Projects</NavbarLink>
+        </LI>
+        <LI>
+          <NavbarLink to="/blog">Blog</NavbarLink>
+        </LI>
+        <LI>
+          <NavbarLink to="/photo">Photo</NavbarLink>
+        </LI>
+        <LI>
+          <NavbarLink to="/contact">Contact</NavbarLink>
+        </LI>
+      </LinkDiv>
+    </NavBar>
+    <MobileNavBar>
+      <MobileHeaderDiv>
+        <MobileHeaderLink to="/">
+          <MobileSpaceTrevLogo />
+        </MobileHeaderLink>
+      </MobileHeaderDiv>
+      <MobileLinkDiv>
+        <LI>
+          <MobileNavbarLink to="/projects">Projects</MobileNavbarLink>
+        </LI>
+        <LI>
+          <MobileNavbarLink to="/blog">Blog</MobileNavbarLink>
+        </LI>
+        <LI>
+          <MobileNavbarLink to="/photo">Photo</MobileNavbarLink>
+        </LI>
+        <LI>
+          <MobileNavbarLink to="/contact">Contact</MobileNavbarLink>
+        </LI>
+      </MobileLinkDiv>
+    </MobileNavBar>
+  </>
 )
 
 Header.propTypes = {
