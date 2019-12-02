@@ -10,7 +10,7 @@ const Photo = () => (
     <SEO title="Photos Page" />
     <AppDiv>
       <HeaderCard
-        to="blog"
+        to="/blog"
         name="Photo"
         greeting="Welcome To My Photo Page"
         status="Page Under Construction"

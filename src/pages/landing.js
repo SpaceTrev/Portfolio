@@ -26,22 +26,22 @@ const flypath = keyframes`
   }
 }
 `
-const flypathMin = keyframes`
-{
-  0% {
-      transform  : translateX(-39vw) rotateY(0deg) translateZ(140px) scale3d(1, 1, 1);
-      opacity    : 1.0;
-  }
-  50% {
-      transform  : translateX(25vw) translateZ(140px) scale3d(1, 1, 1);
-      opacity    : 0.5;
-  }
-  100% {
-      transform  : translateX(-39vw) rotateY(180deg) translateZ(140px) scale3d(1, 1, 1);
-      opacity    : 1.0;
-  }
-}
-`
+// const flypathMin = keyframes`
+// {
+//   0% {
+//       transform  : translateX(-39vw) rotateY(0deg) translateZ(140px) scale3d(1, 1, 1);
+//       opacity    : 1.0;
+//   }
+//   50% {
+//       transform  : translateX(25vw) translateZ(140px) scale3d(1, 1, 1);
+//       opacity    : 0.5;
+//   }
+//   100% {
+//       transform  : translateX(-39vw) rotateY(180deg) translateZ(140px) scale3d(1, 1, 1);
+//       opacity    : 1.0;
+//   }
+// }
+// `
 const spin = keyframes`
   from {
     transform: rotate(0deg);
@@ -438,7 +438,7 @@ const Landing = () => {
           </FlexRowCentered>
           <FlexRowWords></FlexRowWords>
           <FlexRowCentered>
-            <Button to="/projects">Enter @ Own Risk</Button>
+            <Button to="/home">Enter @ Own Risk</Button>
           </FlexRowCentered>
           <PlaneDiv>
             <FlyPlane />

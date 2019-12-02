@@ -2,6 +2,7 @@ import React from "react"
 import { Router } from "@reach/router"
 import Box from "./box"
 import Landing from "./landing"
+import Home from "./home"
 import Contact from "./contact"
 import Projects from "./projects"
 import Photo from "./photo"
@@ -14,12 +15,14 @@ const App = () => {
     <Router>
       <Landing path="/" />
       <Box path="/box" />
-      <Contact path="/contact" />
-      <Projects path="/projects" />
-      <Photo path="/photo" />
-      <Blog path="/blog" />
-      <TagsPage path="tags" />
-      <NotFoundPage path="/404" />
+      <Home path="/home">
+        <Contact path="/contact" />
+        <Projects path="/projects" />
+        <Photo path="/photo" />
+        <Blog path="/blog" />
+        <TagsPage path="tags" />
+        <NotFoundPage path="/404" />
+      </Home>
     </Router>
   )
 }

@@ -34,7 +34,7 @@ const ListContent = styled.div`
   padding: 0.5em 0em;
   width: 100%;
   border-radius: 4px;
-  border: 1px solid #ffffffa5;
+  border: 1px solid #7fdbff;
   background: #ffffff00;
   &:hover {
     background: #ffffff20;
@@ -97,6 +97,7 @@ const Blog = props => {
   const postList = props.data.allMarkdownRemark
   return (
     <Layout>
+      <H2>A collection of experiences...</H2>
       <List>
         {postList.edges.map(({ node }, i) => (
           <ListItem>

@@ -13,14 +13,16 @@ const TagsDiv = styled.div`
 const TagsLink = styled(Link)`
   margin-bottom: 2rem;
   list-style: none;
-  background: linear-gradient(to right, #9d50bb, #6e48aa);
-  border: 1px solid #ffff;
-  border: 1px solid #ffff;
+  border: 1px solid #7fdbff;
+  border-radius: 4px;
   margin: 1rem;
   padding: 1rem 3rem;
   text-decoration: none;
   font-size: 1.1rem;
   color: #d3d3d3;
+  &:hover {
+    background: #ffffff20;
+  }
 `
 const FlexDiv = styled.div`
   display: flex;

@@ -4,18 +4,18 @@ import SEO from "../components/seo"
 import HeaderCard from "../components/HeaderCard"
 import AppDiv from "../reusable/AppDiv"
 
-const Projects = () => (
+const Home = () => (
   <Layout>
     <SEO title="Projects Page" />
     <AppDiv>
       <HeaderCard
-        to="/photo"
-        name="Project"
-        greeting="Welcome To My Project Page"
+        to="/projects"
+        name="Home"
+        greeting="Welcome To my Home Page"
         status="Page Under Construction"
       />
     </AppDiv>
   </Layout>
 )
 
-export default Projects
+export default Home

@@ -5,7 +5,51 @@ import { graphql } from "gatsby"
 import PrevNext from "../components/prevnext"
 import MetaTags from "../components/Metatags"
 import Share from "../components/share"
+import styled from "styled-components"
 
+const BlogPostContent = styled.div`
+  min-height: calc(100vw - 75px) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+`
+const PostDiv = styled.div`
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 55px;
+  border: 1px solid #7fdbff;
+  border-radius: 4px;
+  margin: 15px 0px 25px 0px;
+  color: #fffffffa;
+`
+const TagDiv = styled.div`
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
+`
+const H1 = styled.h1`
+  font-weight: bolder;
+  color: #ffffffc5;
+  margin: 10px 0px;
+  padding: 5px 10px;
+  border: 2px solid #7fdbff;
+  border-radius: 4px;
+`
+const TagA = styled.a`
+  padding: 5px 6px;
+  margin: 5px 3px;
+  text-decoration: none;
+  color: #fff;
+  background: #4169e2;
+  &:hover {
+    background: #4169e2a5;
+  }
+`
+const Span = styled.span``
 function BlogPost(props) {
   const url = props.data.site.siteMetadata.siteUrl
   const thumbnail =
@@ -22,23 +66,23 @@ function BlogPost(props) {
         url={url}
         pathname={props.location.pathname}
       />
-      <div style={{ textAlign: "center" }}>
-        <h1>{title}</h1>
+      <BlogPostContent>
+        <H1>{title}</H1>
         {image && <Img fluid={image.childImageSharp.fluid} />}
-        <div
+        <PostDiv
           dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
         />
-        <div>
-          <span>Tagged in </span>
+        <TagDiv>
+          <Span>Tagged in </Span>
           {tags.map((tag, i) => (
-            <a href={`/${tag}`} key={i} style={{ marginLeft: "10px" }}>
+            <TagA href={`/${tag}`} key={i}>
               {tag}
-            </a>
+            </TagA>
           ))}
-        </div>
+        </TagDiv>
         <Share title={title} url={url} pathname={props.location.pathname} />
         <PrevNext prev={prev && prev.node} next={next && next.node} />
-      </div>
+      </BlogPostContent>
     </Layout>
   )
 }
@@ -53,6 +97,7 @@ export const query = graphql`
       frontmatter {
         title
         tags
+        date
         image {
           childImageSharp {
             resize(width: 1000, height: 420) {

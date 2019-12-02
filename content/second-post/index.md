@@ -1,6 +1,7 @@
 ---
 title: Blog post 2
 date: "2019-11-11"
+image: "time.jpg"
 tags: ["javascript", "react"]
 ---
 
