@@ -92,27 +92,35 @@ const H2 = styled.h2`
     font-size: 14px;
   }
 `
-
+const BlogDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: calc(100vh - 75px);
+`
 const Blog = props => {
   const postList = props.data.allMarkdownRemark
   return (
     <Layout>
-      <H2>A collection of experiences...</H2>
-      <List>
-        {postList.edges.map(({ node }, i) => (
-          <ListItem>
-            <ListContent>
-              <PostLink to={node.fields.slug} key={i}>
-                <H2>{node.frontmatter.title}</H2>
-                <SpanContainer>
-                  <Span>{node.frontmatter.date}: </Span>
-                </SpanContainer>
-                <P>{node.excerpt}</P>
-              </PostLink>
-            </ListContent>
-          </ListItem>
-        ))}
-      </List>
+      <BlogDiv>
+        <H2>A collection of experiences...</H2>
+        <List>
+          {postList.edges.map(({ node }, i) => (
+            <ListItem>
+              <ListContent>
+                <PostLink to={node.fields.slug} key={i}>
+                  <H2>{node.frontmatter.title}</H2>
+                  <SpanContainer>
+                    <Span>{node.frontmatter.date}: </Span>
+                  </SpanContainer>
+                  <P>{node.excerpt}</P>
+                </PostLink>
+              </ListContent>
+            </ListItem>
+          ))}
+        </List>
+      </BlogDiv>
     </Layout>
   )
 }

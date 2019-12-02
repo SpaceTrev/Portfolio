@@ -8,7 +8,7 @@ import Share from "../components/share"
 import styled from "styled-components"
 
 const BlogPostContent = styled.div`
-  min-height: calc(100vw - 75px) !important;
+  min-height: calc(100vh - 75px) !important;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -35,7 +35,7 @@ const H1 = styled.h1`
   font-weight: bolder;
   color: #ffffffc5;
   margin: 10px 0px;
-  padding: 5px 10px;
+  padding: 10px 47px;
   border: 2px solid #7fdbff;
   border-radius: 4px;
 `

@@ -15,35 +15,47 @@ const Tags = styled.div`
 const TagsLink = styled(Link)`
   margin-bottom: 2rem;
   list-style: none;
-  background: linear-gradient(to right, #9d50bb, #6e48aa);
-  border: 1px solid #ffff;
-  border: 1px solid #ffff;
+  border: 1px solid #7fdbff;
+  border-radius: 4px;
+  list-style: none;
   margin: 1rem;
   padding: 1rem 3rem;
   text-decoration: none;
   font-size: 1.1rem;
   color: #d3d3d3;
+  &:hover {
+    background: #ffffff20;
+  }
 `
 const FlexDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `
+const AllTagsDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: calc(100vh - 75px);
+`
 function TagsPage(props) {
   const data = props.data.allMarkdownRemark.group
 
   return (
     <Layout>
-      <FlexDiv>
-        <h1>All tags</h1>
-      </FlexDiv>
-      <Tags>
-        {data.map(tag => (
-          <TagsLink to={`/${tag.fieldValue}`}>
-            {tag.fieldValue} {`(${tag.totalCount})`}
-          </TagsLink>
-        ))}
-      </Tags>
+      <AllTagsDiv>
+        <FlexDiv>
+          <h1>All tags</h1>
+        </FlexDiv>
+        <Tags>
+          {data.map(tag => (
+            <TagsLink to={`/${tag.fieldValue}`}>
+              {tag.fieldValue} {`(${tag.totalCount})`}
+            </TagsLink>
+          ))}
+        </Tags>
+      </AllTagsDiv>
     </Layout>
   )
 }

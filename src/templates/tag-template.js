@@ -26,7 +26,15 @@ const TagsLink = styled(Link)`
 `
 const FlexDiv = styled.div`
   display: flex;
+  display: row;
   justify-content: center;
+  align-items: center;
+`
+const FlexColumn = styled.div`
+  min-height: calc(100vh - 75px) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 `
 function Tags(props) {
@@ -34,16 +42,18 @@ function Tags(props) {
   const { tag } = props.pageContext
   return (
     <Layout>
-      <FlexDiv>
-        <h1>{`Available posts  in ${tag}`}</h1>
-      </FlexDiv>
-      <TagsDiv>
-        {posts.map(({ node }, i) => (
-          <TagsLink to={node.fields.slug} key={i}>
-            {node.frontmatter.title}
-          </TagsLink>
-        ))}
-      </TagsDiv>
+      <FlexColumn>
+        <FlexDiv>
+          <h1>{`Available posts with the tag: ${tag}`}</h1>
+        </FlexDiv>
+        <TagsDiv>
+          {posts.map(({ node }, i) => (
+            <TagsLink to={node.fields.slug} key={i}>
+              {node.frontmatter.title}
+            </TagsLink>
+          ))}
+        </TagsDiv>
+      </FlexColumn>
     </Layout>
   )
 }

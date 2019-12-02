@@ -4,10 +4,13 @@ import FlexRow from "../reusable/FlexRow"
 import FlexColumn from "../reusable/FlexColumn"
 import styled from "styled-components"
 const FlexColumnCentered = styled(FlexColumn)`
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   margin: 0px 5px;
+  min-height: calc(100vh - 75px);
 `
 const HeaderCard = props => (
   <FlexColumnCentered>
