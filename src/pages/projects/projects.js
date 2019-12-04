@@ -9,7 +9,7 @@ const Projects = () => (
     <SEO title="Projects Page" />
     <AppDiv>
       <HeaderCard
-        to="/photo"
+        to="/home"
         name="Project"
         greeting="Welcome To My Project Page"
         status="Page Under Construction"
