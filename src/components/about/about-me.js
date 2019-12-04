@@ -22,6 +22,11 @@ const Card = styled.div`
     padding: 25px 15px 75px 15px;
   }
 `
+const BlkGithub = styled(Github)`
+  color: black;
+  height: 40px;
+  width: 40px;
+`
 const FlexRow = styled.div`
   display: flex;
   flex-direction: row;
@@ -52,11 +57,11 @@ const Para = styled.span`
     font-size: 12px;
   }
 `
-const SmallPara = styled.span`
-  font-size: 12px;
-  padding: 10px 10px;
-`
-const UL = styled.ul``
+// const SmallPara = styled.span`
+//   font-size: 12px;
+//   padding: 10px 10px;
+// `
+// const UL = styled.ul``
 
 const AboutMe = () => (
   <Card>
@@ -98,7 +103,7 @@ const AboutMe = () => (
       </Para>
     </FlexRow>
     <FlexRow>
-      <Github />
+      <BlkGithub />
     </FlexRow>
   </Card>
 )
