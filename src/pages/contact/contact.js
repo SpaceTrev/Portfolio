@@ -12,6 +12,13 @@ const Form = styled.form`
   justify-content: center;
   align-items: center;
   width: 30%;
+  transition: 3s width;
+  @media screen and (max-width: 1000px) {
+    width: 45%;
+  }
+  @media screen and (max-width: 600px) {
+    width: 65%;
+  }
 `
 const Button = styled.button`
   padding: 10px 20px;

@@ -293,9 +293,9 @@ const Spinz = styled(Eyes)`
   /* & #right-pupil {
     animation: ${shakeEm} 2s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
   } */
-  & #left-pupil {
+  /* & #left-pupil {
     animation: ${shakeEm} 1s cubic-bezier(1, -0.46, 0.07, 1.28) both infinite;
-  }
+  } */
   & #right-eye {
     animation: ${spin} 2s linear infinite;
     transform-origin: center;
