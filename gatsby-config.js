@@ -11,6 +11,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-styled-components`,
+    "gatsby-plugin-netlify-cms",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
