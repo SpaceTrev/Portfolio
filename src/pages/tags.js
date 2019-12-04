@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../../components/layout/layout"
+import Layout from "../components/layout"
 import styled from "styled-components"
 
 const Tags = styled.div`
