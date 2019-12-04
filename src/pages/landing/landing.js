@@ -1,14 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
-import SEO from "../components/seo"
+import SEO from "../../components/seo"
 import styled, { keyframes } from "styled-components"
-import Eyes from "../images/eyeballz.svg"
-import NorthAmer from "../images/USA.svg"
-import Europa from "../images/EU.svg"
-import Airplane from "../images/aero.svg"
-import Cloud from "../images/cloud-boi.svg"
-import SpaceTrev from "../images/SpaceTrevLogoWhite.svg"
-import FlexRow from "../reusable/FlexRow"
+import Eyes from "../../images/eyeballz.svg"
+import NorthAmer from "../../images/USA.svg"
+import Europa from "../../images/EU.svg"
+import Airplane from "../../images/aero.svg"
+import Cloud from "../../images/cloud-boi.svg"
+import SpaceTrev from "../../images/SpaceTrevLogoWhite.svg"
+import FlexRow from "../../reusable/FlexRow"
 
 const flypath = keyframes`
 {
@@ -26,22 +26,6 @@ const flypath = keyframes`
   }
 }
 `
-// const flypathMin = keyframes`
-// {
-//   0% {
-//       transform  : translateX(-39vw) rotateY(0deg) translateZ(140px) scale3d(1, 1, 1);
-//       opacity    : 1.0;
-//   }
-//   50% {
-//       transform  : translateX(25vw) translateZ(140px) scale3d(1, 1, 1);
-//       opacity    : 0.5;
-//   }
-//   100% {
-//       transform  : translateX(-39vw) rotateY(180deg) translateZ(140px) scale3d(1, 1, 1);
-//       opacity    : 1.0;
-//   }
-// }
-// `
 const spin = keyframes`
   from {
     transform: rotate(0deg);
@@ -84,143 +68,155 @@ const shakeEm = keyframes`
 `
 const colorShift = keyframes`
   0% {
-    background: #181A1B;
-  }
-  4% {
-    background: linear-gradient(to bottom, #181111 80%, #962f1f 100%);
-  }
-  8% {
-    background: linear-gradient(to bottom, #962f1f 50%, #962e1a 100%);
-  }
-  12% {
+    background: #bdc3c7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #2c3e50,
+      #bdc3c7
+    ); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
-      to bottom,
-      #962e1a 30%,
-      #c5752d 80%,
-      #ff7034 100%
-    );
+      to right,
+      #2c3e50,
+      #bdc3c7
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
-  16% {
+  10% {
+    background: #0f2027; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #2c5364,
+      #203a43,
+      #0f2027
+    ); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
-      to bottom,
-      #c5752d 0%,
-      #ff7034 30%,
-      #c5752d 80%,
-      #ffaa11 100%
-    );
+      to right,
+      #2c5364,
+      #203a43,
+      #0f2027
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   20% {
+    background: #2980b9; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #ffffff,
+      #6dd5fa,
+      #2980b9
+    ); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
-      to bottom,
-      #800000 0%,
-      #c5752d 30%,
-      #ffaa11 60%,
-      #4f4f47 80%,
-      #163c52 100%
-    );
+      to right,
+      #ffffff,
+      #6dd5fa,
+      #2980b9
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
-  24% {
+  30% {
+    background: #7f7fd5; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #91eae4,
+      #86a8e7,
+      #7f7fd5
+    ); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
-      to bottom,
-      #ffaa11 0%,
-      #4f4f47 30%,
-      #154277 70%,
-      #1e528e 100%
-    );
-  }
-  28% {
-    background: linear-gradient(
-      to bottom,
-      #e9ce5d 0%,
-      #154277 50%,
-      #1e528e 100%
-    );
-  }
-  32% {
-    background: linear-gradient(
-      to bottom,
-      #154277 0%,
-      #265889 50%,
-      #1e528e 100%
-    );
-  }
-  36% {
-    background: linear-gradient(
-      to bottom,
-      #2473ab 0%,
-      #1e528e 70%,
-      #5b7983 100%
-    );
+      to right,
+      #91eae4,
+      #86a8e7,
+      #7f7fd5
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   40% {
-    background: linear-gradient(to bottom, #2d91c2 0%, #1e528e 100%);
+    background: #005aa7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #fffde4,
+      #005aa7
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #fffde4,
+      #005aa7
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
-  44% {
-    background: linear-gradient(to bottom, #57c1eb 0%, #246fa8 100%);
-  }
-  48% {
-    background: linear-gradient(to bottom, #57c1eb 0%, #38a3d1 100%);
-  }
-  52% {
-    background: linear-gradient(to bottom, #1e528e 0%, #2d91c2 100%);
-  }
-  56% {
-    background: linear-gradient(to bottom, #246fa8 0%, #1e528e 100%);
+  50% {
+    background: #a8c0ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #3f2b96,
+      #a8c0ff
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #3f2b96,
+      #a8c0ff
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   60% {
+    background: #74ebd5; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #acb6e5,
+      #74ebd5
+    ); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
-      to bottom,
-      #1e528e 1%,
-      #246fa8 70%,
-      #757abf 100%
-    );
+      to right,
+      #acb6e5,
+      #74ebd5
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
-  64% {
-    background: linear-gradient(to bottom, #246fa8 0%, #757abf 100%);
-  }
-  68% {
+  70% {
+    background: #283c86; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #45a247,
+      #283c86
+    ); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
-      to bottom,
-      #246fa8 0%,
-      #8583be 60%,
-      #ffaa11 100%
-    );
-  }
-  72% {
-    background: linear-gradient(
-      to bottom,
-      #8583be 0%,
-      #ffaa11 50%,
-      #800000 100%
-    );
-  }
-
-  76% {
-    background: linear-gradient(
-      to bottom,
-      #ffaa11 0%,
-      #800000 80%,
-      #800000 100%
-    );
+      to right,
+      #45a247,
+      #283c86
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   80% {
-    background: linear-gradient(to bottom, #800000 0%, #20202c 100%);
+    background: #000046; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #1cb5e0,
+      #000046
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #1cb5e0,
+      #000046
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
-  84% {
-    background: linear-gradient(to bottom, #800034 10%, #20202c 100%);
-  }
-
-  88% {
-    background: linear-gradient(to bottom, #181A1B 85%, #191621 100%);
-  }
-  92% {
-    background: linear-gradient(to bottom, #181A1B 85%, #181A1B 100%);
-  }
-  96% {
-    background: linear-gradient(to bottom, #181A1B 85%, #181A1B 100%);
+  90% {
+    background: #0f2027; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #2c5364,
+      #203a43,
+      #0f2027
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #2c5364,
+      #203a43,
+      #0f2027
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   100% {
-    background: #181A1B;
+    background: #bdc3c7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #2c3e50,
+      #bdc3c7
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #2c3e50,
+      #bdc3c7
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 `
 

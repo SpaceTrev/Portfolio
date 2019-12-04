@@ -1,6 +1,6 @@
 import React from "react"
-import TwitterIcon from "../images/twitter.svg"
-import FbIcon from "../images/facebook.svg"
+import TwitterIcon from "../../images/twitter.svg"
+import FbIcon from "../../images/facebook.svg"
 import styled from "styled-components"
 const Social = styled.ul`
   list-style: none;

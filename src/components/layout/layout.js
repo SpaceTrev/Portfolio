@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-import Header from "./header"
+import Header from "../header"
 
 const Content = styled.div`
   min-height: calc(100vh - 75px);
@@ -29,7 +29,7 @@ const Body = styled.div`
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   margin: 0;
-  font-family: Andale Mono, monospace;
+  font-family: Andale Mono, monospace !important;
   min-width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;

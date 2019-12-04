@@ -31,6 +31,7 @@ const ListItem = styled.li`
 const ListContent = styled.div`
   display: flex;
   flex-direction: column;
+
   padding: 0.5em 0em;
   width: 100%;
   border-radius: 4px;

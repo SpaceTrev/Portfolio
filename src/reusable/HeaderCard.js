@@ -1,7 +1,7 @@
 import React from "react"
-import LinkButton from "../reusable/LinkButton"
-import FlexRow from "../reusable/FlexRow"
-import FlexColumn from "../reusable/FlexColumn"
+import LinkButton from "./LinkButton"
+import FlexRow from "./FlexRow"
+import FlexColumn from "./FlexColumn"
 import styled from "styled-components"
 const FlexColumnCentered = styled(FlexColumn)`
   display: flex;

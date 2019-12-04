@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import PrevNext from "../components/prevnext"
-import MetaTags from "../components/Metatags"
+import MetaTags from "../metatags/Metatags"
 import Share from "../components/share"
 import styled from "styled-components"
 

@@ -15,14 +15,13 @@ const App = () => {
     <Router>
       <Landing path="/" />
       <Box path="/box" />
-      <Home path="/home">
-        <Contact path="/contact" />
-        <Projects path="/projects" />
-        <Photo path="/photo" />
-        <Blog path="/blog" />
-        <TagsPage path="tags" />
-        <NotFoundPage path="/404" />
-      </Home>
+      <Home path="/home" />
+      <Contact path="/contact" />
+      <Projects path="/projects" />
+      <Photo path="/photo" />
+      <Blog path="/blog/" />
+      <TagsPage path="tags" />
+      <NotFoundPage path="/404" />
     </Router>
   )
 }

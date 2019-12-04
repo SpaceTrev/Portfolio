@@ -1,9 +1,9 @@
 import React from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import HeaderCard from "../components/HeaderCard"
-import AppDiv from "../reusable/AppDiv"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import HeaderCard from "../../reusable/HeaderCard"
+import AppDiv from "../../reusable/AppDiv"
 
 const Photo = () => (
   <Layout>

@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import SpaceTrev from "../images/SpaceTrevLogo.svg"
+import SpaceTrev from "../../images/SpaceTrevLogo.svg"
 
 const NavBar = styled.div`
   display: flex;
@@ -127,6 +127,9 @@ const Header = ({ siteTitle }) => (
       </HeaderDiv>
       <LinkDiv>
         <LI>
+          <MobileNavbarLink to="/home">Home</MobileNavbarLink>
+        </LI>
+        <LI>
           <NavbarLink to="/projects">Projects</NavbarLink>
         </LI>
         <LI>
@@ -147,6 +150,9 @@ const Header = ({ siteTitle }) => (
         </MobileHeaderLink>
       </MobileHeaderDiv>
       <MobileLinkDiv>
+        <LI>
+          <MobileNavbarLink to="/home">Home</MobileNavbarLink>
+        </LI>
         <LI>
           <MobileNavbarLink to="/projects">Projects</MobileNavbarLink>
         </LI>
