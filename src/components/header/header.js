@@ -10,8 +10,8 @@ const NavBar = styled.div`
   align-items: center;
   background: transparent;
   min-width: 100vw;
-  @media screen and (max-width: 665px) {
-    display: none !important;
+  @media screen and (max-width: 740px) {
+    display: none;
   }
 `
 
@@ -50,15 +50,6 @@ const LinkDiv = styled.ul`
   align-items: center;
   justify-content: flex-end;
   list-style: none;
-  @media screen and (max-width: 665px) {
-    font-size: 12px;
-    width: 60%;
-  }
-  @media screen and (max-width: 610px) {
-    display: none;
-    /* flex: 75%;
-    padding: 0px; */
-  }
 `
 
 const LI = styled.li``
@@ -71,7 +62,7 @@ const SpaceTrevLogo = styled(SpaceTrev)`
 
 const MobileNavBar = styled.div`
   display: none;
-  @media screen and (max-width: 665px) {
+  @media screen and (max-width: 740px) {
     display: block !important;
   }
 `
